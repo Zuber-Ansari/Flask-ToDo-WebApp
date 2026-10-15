@@ -13,8 +13,6 @@ class Todo(db.Model):
     def __repr__(self):
         return f"{self.sno} \n {self.title}"
 
-# Should not use Flask in production
-
 @app.route('/', methods=['GET','POST'])
 def hello_world():
     if request.method == "POST":
